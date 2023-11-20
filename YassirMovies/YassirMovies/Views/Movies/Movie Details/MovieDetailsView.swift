@@ -31,9 +31,12 @@ struct MovieDetailsView: View {
 					.frame(height: 400)
 					.clipShape(RoundedRectangle(cornerRadius: 10))
 					
-					VStack(alignment: .leading) {
+					VStack(alignment: .leading, spacing: 10) {
 						Text(viewModel.title)
 							.font(.headline)
+						
+						Text(viewModel.year)
+							.font(.callout)
 						
 						Text(viewModel.overview)
 							.font(.caption)

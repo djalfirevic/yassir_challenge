@@ -20,6 +20,7 @@ final class MovieDetailsViewModel: ObservableObject {
 	@Published var imageUrl: URL?
 	@Published var title = ""
 	@Published var overview = ""
+	@Published var year = ""
 	@Published var rating = 0.0
 	private let movieId: Int
 	private let moviesStore: MoviesStoreProtocol
@@ -54,6 +55,7 @@ final class MovieDetailsViewModel: ObservableObject {
 				self.title = response.title
 				self.overview = response.overview
 				self.rating = response.rating
+				self.year = response.year ?? ""
 			} catch {
 				Logger.log(message: "Fetching movie details: \(error)", type: .error)
 			}

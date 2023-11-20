@@ -39,7 +39,7 @@ final class MoviesViewModel: ObservableObject {
 		switch action {
 		case .onAppear:
 			if movies.isEmpty {
-				fetchTrendingMovies()
+				fetchTrendingMovies(reload: true)
 			}
 		case .onFetch:
 			fetchTrendingMovies()

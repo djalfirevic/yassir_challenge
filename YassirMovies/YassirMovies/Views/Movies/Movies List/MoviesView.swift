@@ -68,7 +68,7 @@ struct MoviesView: View {
 				Text(movie.title)
 					.font(.headline)
 				
-				Text(movie.overview)
+				Text(movie.year ?? "")
 					.font(.caption)
 			}
 		}

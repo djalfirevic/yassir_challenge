@@ -51,13 +51,12 @@ final class MoviesViewModel: ObservableObject {
 	// MARK: - Private API
 	
 	private func fetchTrendingMovies(reload: Bool = false) {
-		isLoading = true
-		
 		Task {
 			defer { isLoading  = false }
 			
 			do {
 				if reload {
+					isLoading = true
 					page = 1
 				}
 				

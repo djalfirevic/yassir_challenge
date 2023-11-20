@@ -38,6 +38,7 @@ struct MoviesView: View {
 							.tint(.purple)
 					}
 				}
+				.listStyle(.plain)
 				.accessibilityLabel("moviesListView")
 				.navigationTitle("Yassir")
 				.refreshable {
